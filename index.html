@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Калькулятор ОСАГО 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ОСАГО 2025 – онлайн-калькулятор <span class="info-icon" onclick="toggleInfo()">🛈</span></h1>
+    <div id="infoPopup" class="popup">
+      <strong>Інструкція:</strong><br />
+      1️⃣ Вкажи вік, об’єм двигуна або 0 для електрокара.<br />
+      2️⃣ Обери регіон реєстрації.<br />
+      3️⃣ Отримай ціни від усіх СК та найдешевший варіант 💸
+    </div>
+
+    <form class="form-container">
+      <label>Вік водія:</label>
+      <input type="number" id="driverAge" placeholder="напр. 30" />
+
+      <label>Обʼєм двигуна (см³):</label>
+      <input type="number" id="engineVolume" placeholder="напр. 1600 (або 0 для електро)" />
+      <span id="volumeError" class="error"></span>
+
+      <label>Регіон реєстрації:</label>
+      <select id="region">
+        <option value="">Оберіть регіон</option>
+        <option value="kyiv">Київ</option>
+        <option value="lviv">Львів</option>
+        <option value="borispil">Бориспіль</option>
+        <option value="odessa">Одеса</option>
+        <option value="dnipro">Дніпро</option>
+        <option value="kharkiv">Харків</option>
+      </select>
+    </form>
+
+    <div class="result-block" id="resultBlock">⬅️ Заповніть дані для розрахунку</div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
